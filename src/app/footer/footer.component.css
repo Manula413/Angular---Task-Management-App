@@ -1,0 +1,73 @@
+/* Footer Component Styling */
+.footer {
+    padding: 1.5rem;
+    background-color: #007bff;
+    color: #fff;
+    text-align: center;
+    font-family: Arial, sans-serif;
+    border-top: 1px solid #0056b3;
+    box-shadow: 0 -2px 8px rgba(0, 0, 0, 0.1);
+
+}
+
+.footer-content {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.footer p {
+    margin: 0 0 10px;
+    font-size: 0.9rem;
+    color: #e9ecef;
+}
+
+.footer-navigation {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.footer-link {
+    color: #e9ecef;
+    text-decoration: none;
+    font-size: 0.9rem;
+    transition: color 0.3s;
+}
+
+.footer-link:hover {
+    color: #cce5ff;
+}
+
+/* Responsive Design for Footer */
+
+/* Medium Screens (Tablets) */
+@media (max-width: 768px) {
+    .footer {
+        padding: 1rem;
+    }
+
+    .footer p {
+        font-size: 0.8rem;
+    }
+
+    .footer-link {
+        font-size: 0.8rem;
+    }
+}
+
+/* Small Screens (Mobile Devices) */
+@media (max-width: 480px) {
+    .footer-navigation {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+
+    .footer p {
+        font-size: 0.75rem;
+    }
+
+    .footer-link {
+        font-size: 0.75rem;
+    }
+}

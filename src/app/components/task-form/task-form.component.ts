@@ -12,27 +12,21 @@ export class TaskFormComponent {
 
   constructor(private router: Router) {}
 
-  addTask() {
-    if (this.newTaskTitle.trim() === '') {
-      return; // Don't add an empty task
-    }
+  addTask(): void {
+    const trimmedTitle = this.newTaskTitle.trim();
+    if (!trimmedTitle) return;
 
     const newTask = {
-      id: Date.now(), // Unique ID based on the current timestamp
-      title: this.newTaskTitle,
+      id: Date.now(),
+      title: trimmedTitle,
       completed: false,
     };
 
-    // Get existing tasks from localStorage
     const tasks = JSON.parse(localStorage.getItem('tasks') || '[]');
-
-    // Add the new task to the list
     tasks.push(newTask);
-
-    // Save the updated tasks back to localStorage
     localStorage.setItem('tasks', JSON.stringify(tasks));
 
-    // Redirect back to the task list
-    this.router.navigate(['/']);
+    this.newTaskTitle = ''; // Clear the input
+    this.router.navigate(['/']); // Navigate back
   }
 }

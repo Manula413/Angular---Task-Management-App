@@ -7,7 +7,8 @@ import { RouterModule, Routes } from '@angular/router';
 import { AppComponent } from './app.component';
 import { TaskListComponent } from './components/task-list/task-list.component';
 import { TaskFormComponent } from './components/task-form/task-form.component';
-import { HeaderComponent } from './header/header.component'; // Ensure HeaderComponent is imported
+import { HeaderComponent } from './header/header.component';
+import { FooterComponent } from './footer/footer.component'; // Ensure HeaderComponent is imported
 
 const routes: Routes = [
   { path: '', component: TaskListComponent },
@@ -19,7 +20,8 @@ const routes: Routes = [
     AppComponent,
     TaskListComponent,
     TaskFormComponent,
-    HeaderComponent, // HeaderComponent is declared here
+    HeaderComponent,
+    FooterComponent, // HeaderComponent is declared here
   ],
   imports: [
     BrowserModule,

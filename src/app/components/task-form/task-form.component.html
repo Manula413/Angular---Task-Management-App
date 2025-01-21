@@ -1,16 +1,20 @@
 <div class="task-form">
-    <h2>Add New Task</h2>
-    <form (ngSubmit)="addTask()">
-      <label for="taskTitle">Task Title:</label>
+  <h2>Add a New Task</h2>
+  <form (ngSubmit)="addTask()">
+    <div class="form-group">
+      <label for="taskTitle">Task Title</label>
       <input
         type="text"
         id="taskTitle"
         [(ngModel)]="newTaskTitle"
         name="taskTitle"
+        placeholder="Enter your task here"
         required
       />
-      <button type="submit">Add Task</button>
-    </form>
-    <button routerLink="/">Back to Task List</button>
-  </div>
-  
+    </div>
+    <div class="action-buttons">
+      <button type="submit" [disabled]="!newTaskTitle.trim()">Add Task</button>
+      <button routerLink="/" class="back-button">Back to Task List</button>
+    </div>
+  </form>
+</div>
