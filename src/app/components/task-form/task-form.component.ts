@@ -9,8 +9,7 @@ import { Router } from '@angular/router';
 })
 export class TaskFormComponent {
   newTaskTitle: string = '';
-  newTaskDescription: string = '';  // New description field
-
+  newTaskDescription: string = '';  
   constructor(private router: Router) {}
 
   addTask(): void {
@@ -20,7 +19,7 @@ export class TaskFormComponent {
     const newTask = {
       id: Date.now(),
       title: trimmedTitle,
-      description: this.newTaskDescription.trim(),  // Include description
+      description: this.newTaskDescription.trim(),  
       completed: false,
     };
 
@@ -28,8 +27,8 @@ export class TaskFormComponent {
     tasks.push(newTask);
     localStorage.setItem('tasks', JSON.stringify(tasks));
 
-    this.newTaskTitle = ''; // Clear the title input
-    this.newTaskDescription = '';  // Clear the description input
-    this.router.navigate(['/']); // Navigate back to the task list
+    this.newTaskTitle = ''; 
+    this.newTaskDescription = ''; 
+    this.router.navigate(['/']); 
   }
 }

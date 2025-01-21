@@ -1,4 +1,4 @@
-/* Footer Component Styling */
+
 .footer {
     padding: 1.5rem;
     background-color: #007bff;
@@ -41,7 +41,6 @@
 
 /* Responsive Design for Footer */
 
-/* Medium Screens (Tablets) */
 @media (max-width: 768px) {
     .footer {
         padding: 1rem;
@@ -56,7 +55,7 @@
     }
 }
 
-/* Small Screens (Mobile Devices) */
+
 @media (max-width: 480px) {
     .footer-navigation {
         flex-direction: column;
