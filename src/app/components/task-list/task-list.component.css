@@ -1,16 +1,17 @@
 .task-list {
-  width: 100%;
   max-width: 600px;
   margin: 0 auto;
   padding: 20px;
-  text-align: center;
-  border: 1px solid #ddd;
+  background-color: #f4f4f4;
   border-radius: 8px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+  text-align: center;
 }
 
 ul {
-  list-style: none;
+  list-style-type: none;
   padding: 0;
 }
 
@@ -19,23 +20,56 @@ li {
   justify-content: space-between;
   align-items: center;
   padding: 10px;
-  border-bottom: 1px solid #eee;
+  border-bottom: 1px solid #ddd;
 }
 
 li.completed span {
   text-decoration: line-through;
-  color: gray;
+  color: #888;
 }
 
 button {
-  background-color: #007bff;
+  padding: 5px 10px;
+  background-color: #4caf50;
   color: white;
   border: none;
-  padding: 5px 10px;
   border-radius: 4px;
   cursor: pointer;
 }
 
 button:hover {
+  background-color: #45a049;
+}
+
+button:focus {
+  outline: none;
+}
+
+button.router-link {
+  background-color: #007bff;
+  border-radius: 4px;
+}
+
+button.router-link:hover {
   background-color: #0056b3;
 }
+
+@media (max-width: 768px) {
+  .task-list, .task-form {
+    padding: 15px;
+  }
+
+  ul {
+    padding-left: 20px;
+  }
+  
+  button {
+    padding: 8px 12px;
+    font-size: 14px;
+  }
+
+  input {
+    font-size: 14px;
+  }
+}
+
