@@ -1,1 +1,19 @@
-/* You can add global styles to this file, and also import other style files */
+
+
+/* Root-level theme variables */
+:root {
+    --primary-color: #4caf50; /* Green for buttons */
+    --primary-color-hover: #45a049;
+    --secondary-color: #007bff; /* Blue for links */
+    --secondary-color-hover: #0056b3;
+    --text-color: #333;
+    --background-color: #f4f4f4;
+    --border-color: #ddd;
+    --completed-text-color: #888;
+    --font-family: 'Arial', sans-serif;
+    --max-width: 600px;
+    --padding: 20px;
+    --border-radius: 8px;
+  }
+  
+  
