@@ -30,6 +30,6 @@ export class TaskFormComponent {
 
     this.newTaskTitle = ''; // Clear the title input
     this.newTaskDescription = '';  // Clear the description input
-    this.router.navigate(['/']); // Navigate back
+    this.router.navigate(['/']); // Navigate back to the task list
   }
 }

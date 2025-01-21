@@ -7,6 +7,10 @@
           <span>{{ i + 1 }}. {{ task.title }}</span>
           <span class="due-date" *ngIf="task.dueDate">Due: {{ task.dueDate | date: 'shortDate' }}</span>
         </div>
+        <!-- Task Description -->
+        <div class="task-description" *ngIf="task.description">
+          <p>{{ task.description }}</p>
+        </div>
         <div class="task-actions">
           <button (click)="toggleCompletion(task)">
             {{ task.completed ? 'Mark as Incomplete' : 'Mark as Complete' }}
