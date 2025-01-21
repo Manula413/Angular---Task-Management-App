@@ -12,6 +12,19 @@
         required
       />
     </div>
+
+    <!-- Task Description -->
+    <div class="form-group">
+      <label for="taskDescription">Task Description</label>
+      <textarea
+        id="taskDescription"
+        [(ngModel)]="newTaskDescription"
+        name="taskDescription"
+        placeholder="Enter task description here"
+        rows="4"
+      ></textarea>
+    </div>
+
     <div class="action-buttons">
       <button type="submit" [disabled]="!newTaskTitle.trim()">Add Task</button>
       <button routerLink="/" class="back-button">Back to Task List</button>
