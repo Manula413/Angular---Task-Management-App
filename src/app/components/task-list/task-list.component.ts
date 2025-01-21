@@ -10,7 +10,6 @@ export class TaskListComponent {
   tasks: any[] = [];
 
   constructor() {
-    // Load tasks from localStorage when the component is created
     this.loadTasks();
   }
 
@@ -20,10 +19,22 @@ export class TaskListComponent {
     this.tasks = savedTasks;
   }
 
-  // Toggle the completion status of a task and save the updated list
+  // Toggle completion status
   toggleCompletion(task: any) {
     task.completed = !task.completed;
-    // Update the tasks in localStorage
+    this.saveTasks();
+  }
+
+  // Delete a task
+  deleteTask(index: number) {
+    if (confirm('Are you sure you want to delete this task?')) {
+      this.tasks.splice(index, 1);
+      this.saveTasks();
+    }
+  }
+
+  // Save tasks to localStorage
+  saveTasks() {
     localStorage.setItem('tasks', JSON.stringify(this.tasks));
   }
 }
