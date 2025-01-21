@@ -1,0 +1,17 @@
+<div class="task-form">
+    <h2>Add New Task</h2>
+    <form (submit)="addTask()">
+      <label for="taskTitle">Task Title:</label>
+      <input
+        id="taskTitle"
+        type="text"
+        [(ngModel)]="taskTitle"
+        name="taskTitle"
+        required
+        placeholder="Enter task title"
+      />
+      <button type="submit">Add Task</button>
+    </form>
+    <button routerLink="/">Back to Task List</button>
+  </div>
+  
